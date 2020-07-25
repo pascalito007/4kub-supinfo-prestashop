@@ -4,7 +4,7 @@ metadata:
   name: prestashop-config
 data:
   prestashop_database_user: "admin"
-  prestashop_database_name: "mariadb-db"
+  prestashop_database_name: "maria-db"
   prestashop_first_name: "Bitnami"
   prestashop_last_name: "User"
   allow_empty_password: "yes"
