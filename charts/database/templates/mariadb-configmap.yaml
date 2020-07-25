@@ -5,4 +5,4 @@ metadata:
 data:
   mariadb_user: "admin"
   mariadb_database: "maria-db"
-  alow_empty_password: "yes"
+  allow_empty_password: "yes"
