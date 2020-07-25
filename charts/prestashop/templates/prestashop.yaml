@@ -40,3 +40,9 @@ spec:
               configMapKeyRef:
                 name: prestashop-config
                 key: prestashop_last_name
+          - name: ALLOW_EMPTY_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: allow_empty_password
+
