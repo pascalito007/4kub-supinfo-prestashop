@@ -5,3 +5,5 @@ metadata:
 data:
   prestashop_database_user: "admin"
   prestashop_database_name: "mariadb-db"
+  prestashop_first_name: "Bitnami"
+  prestashop_last_name: "User"
