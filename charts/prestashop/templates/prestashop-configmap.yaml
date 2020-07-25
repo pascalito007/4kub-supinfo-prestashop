@@ -8,3 +8,4 @@ data:
   prestashop_first_name: "Bitnami"
   prestashop_last_name: "User"
   allow_empty_password: "yes"
+  prestashop_cookie_check_ip: "no"

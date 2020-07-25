@@ -45,4 +45,9 @@ spec:
               configMapKeyRef:
                 name: prestashop-config
                 key: allow_empty_password
+          - name: PRESTASHOP_COOKIE_CHECK_IP
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: prestashop_cookie_check_ip
 
