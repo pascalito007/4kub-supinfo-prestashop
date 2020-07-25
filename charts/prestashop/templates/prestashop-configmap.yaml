@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prestashop-config
+data:
+  prestashop_database_user: "admin"
+  prestashop_database_name: "mariadb-db"

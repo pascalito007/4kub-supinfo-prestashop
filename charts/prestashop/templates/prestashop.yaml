@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prestashop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prestashop
+  template:
+    metadata:
+      labels:
+        app: prestashop
+    spec:
+      containers:
+        - image: bitnami/prestashop:1.7
+          name: prestashop
+          ports:
+            - containerPort: 80
+          env:
+          - name: PRESTASHOP_DATABASE_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: prestashop_database_name
+
+          - name: PRESTASHOP_DATABASE_USER
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: prestashop_database_user
+
+          - name: PRESTASHOP_FIRST_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: prestashop_first_name
+          - name: PRESTASHOP_LAST_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: prestashop-config
+                key: prestashop_last_name
+          - name: PRESTASHOP_DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: prestashop-secret
+                key: prestashop_database_password
