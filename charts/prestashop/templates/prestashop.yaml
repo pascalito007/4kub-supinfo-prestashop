@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prestashop
-  namespace: appns
 spec:
   replicas: 1
   selector:

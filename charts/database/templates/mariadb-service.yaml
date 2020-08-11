@@ -4,7 +4,6 @@ metadata:
   labels:
     name: mariadb
   name: mariadb
-  namespace: appns
 spec:
   ports:
     - name: mariadb
