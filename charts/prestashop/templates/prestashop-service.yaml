@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: prestashop
+  namespace: appns
   labels:
     name: prestashop
-  name: prestashop
-  namespace: apps-ns
 spec:
   type: NodePort
   ports:

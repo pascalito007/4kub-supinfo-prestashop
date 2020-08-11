@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prestashop-config
-  namespace: apps-ns
+  namespace: appns
 data:
   prestashop_database_user: "admin"
   prestashop_database_name: "mariadb"
