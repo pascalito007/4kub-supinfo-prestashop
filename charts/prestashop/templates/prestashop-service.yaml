@@ -4,6 +4,7 @@ metadata:
   labels:
     name: prestashop
   name: prestashop
+  namespace: apps-ns
 spec:
   type: NodePort
   ports:

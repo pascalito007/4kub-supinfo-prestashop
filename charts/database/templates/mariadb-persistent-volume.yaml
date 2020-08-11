@@ -2,6 +2,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: mariadb-pv-volume
+  namespace: apps-ns
   labels:
     type: local
 spec:

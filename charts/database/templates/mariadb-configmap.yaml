@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mariadb-config
+  namespace: apps-ns
 data:
   mariadb_user: "admin"
   mariadb_database: "mariadb"
