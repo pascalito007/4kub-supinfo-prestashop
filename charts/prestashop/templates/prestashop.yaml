@@ -15,39 +15,31 @@ spec:
       containers:
         - image: bitnami/prestashop:1.7
           name: prestashop
-          ports:
-            - containerPort: 80
           env:
-          - name: PRESTASHOP_DATABASE_NAME
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: prestashop_database_name
+            - name: PRESTASHOP_DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: prestashop_database_name
+            - name: PRESTASHOP_DATABASE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: prestashop_database_user
+            - name: ALLOW_EMPTY_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: allow_empty_password
+            - name: PRESTASHOP_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: prestashop_host
+            - name: APACHE_HTTP_PORT_NUMBER
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: prestashop_apache_port_number
 
-          - name: PRESTASHOP_DATABASE_USER
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: prestashop_database_user
-
-          - name: PRESTASHOP_FIRST_NAME
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: prestashop_first_name
-          - name: PRESTASHOP_LAST_NAME
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: prestashop_last_name
-          - name: ALLOW_EMPTY_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: allow_empty_password
-          - name: PRESTASHOP_COOKIE_CHECK_IP
-            valueFrom:
-              configMapKeyRef:
-                name: prestashop-config
-                key: prestashop_cookie_check_ip
 

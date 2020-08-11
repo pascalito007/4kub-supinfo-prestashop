@@ -4,8 +4,7 @@ metadata:
   name: prestashop-config
 data:
   prestashop_database_user: "admin"
-  prestashop_database_name: "maria-db"
-  prestashop_first_name: "Bitnami"
-  prestashop_last_name: "User"
+  prestashop_database_name: "mariadb"
   allow_empty_password: "yes"
-  prestashop_cookie_check_ip: "no"
+  prestashop_host: "192.168.64.2"
+  prestashop_apache_port_number: "30000"

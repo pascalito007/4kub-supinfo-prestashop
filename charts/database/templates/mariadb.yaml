@@ -15,9 +15,6 @@ spec:
       containers:
         - image: bitnami/mariadb:10.1
           name: mariadb
-          ports:
-            - name: mariadb
-              containerPort: 3306
           env:
             - name: ALLOW_EMPTY_PASSWORD
               valueFrom:

@@ -11,4 +11,4 @@ spec:
       targetPort: 3306
   selector:
     app: mariadb
-  type: NodePort
+  type: ClusterIP
