@@ -7,5 +7,5 @@ data:
   prestashop_database_user: "admin"
   prestashop_database_name: "mariadb"
   allow_empty_password: "yes"
-  prestashop_host: "192.168.64.2"
+  prestashop_host: "172.16.203.150"
   prestashop_apache_port_number: "30000"

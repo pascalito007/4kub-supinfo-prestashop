@@ -13,6 +13,8 @@ spec:
       labels:
         app: prestashop
     spec:
+      nodeSelector:
+        app: master
       containers:
         - image: bitnami/prestashop:1.7
           name: prestashop
