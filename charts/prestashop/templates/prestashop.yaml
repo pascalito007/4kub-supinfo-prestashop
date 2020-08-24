@@ -19,6 +19,8 @@ spec:
         - image: bitnami/prestashop:1.7
           name: prestashop
           env:
+            - name: PRESTASHOP_COOKIE_CHECK_IP
+              value: "no"
             - name: PRESTASHOP_DATABASE_NAME
               valueFrom:
                 configMapKeyRef:

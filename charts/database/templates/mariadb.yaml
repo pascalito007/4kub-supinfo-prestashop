@@ -19,6 +19,8 @@ spec:
         - image: bitnami/mariadb:10.1
           name: mariadb
           env:
+            - name: MARIADB_HOST
+              value: "mariadb"
             - name: ALLOW_EMPTY_PASSWORD
               valueFrom:
                 configMapKeyRef:
