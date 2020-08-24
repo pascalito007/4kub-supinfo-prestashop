@@ -4,7 +4,7 @@ metadata:
   name: mariadb
   namespace: prestashop
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mariadb
@@ -13,8 +13,6 @@ spec:
       labels:
         app: mariadb
     spec:
-      nodeSelector:
-        app: master
       containers:
         - image: bitnami/mariadb:10.1
           name: mariadb
