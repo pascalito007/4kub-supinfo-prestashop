@@ -4,7 +4,7 @@ metadata:
   name: mariadb
   namespace: prestashop
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: mariadb
