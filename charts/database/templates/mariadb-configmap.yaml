@@ -6,5 +6,4 @@ metadata:
 data:
   mariadb_user: "admin"
   mariadb_database: "mariadb"
-  mariadb_host: "mariadb"
   allow_empty_password: "yes"
