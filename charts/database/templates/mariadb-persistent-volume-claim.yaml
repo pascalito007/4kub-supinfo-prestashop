@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mariadb-pvc
-  namespace: ps
+  namespace: prestashop
 spec:
   storageClassName: manual
   accessModes:
