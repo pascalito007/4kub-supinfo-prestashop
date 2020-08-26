@@ -4,7 +4,7 @@ metadata:
   name: mariadb
   namespace: prestashop
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: mariadb
@@ -17,8 +17,6 @@ spec:
         - image: bitnami/mariadb:10.1
           name: mariadb
           env:
-            - name: MARIADB_HOST
-              value: "mariadb"
             - name: ALLOW_EMPTY_PASSWORD
               valueFrom:
                 configMapKeyRef:

@@ -4,7 +4,7 @@ metadata:
   name: prestashop
   namespace: prestashop
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: prestashop
@@ -19,8 +19,11 @@ spec:
         - image: bitnami/prestashop:1.7
           name: prestashop
           env:
-            - name: PRESTASHOP_COOKIE_CHECK_IP
-              value: "no"
+            - name: MARIADB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: prestashop-config
+                  key: mariadb_host
             - name: PRESTASHOP_DATABASE_NAME
               valueFrom:
                 configMapKeyRef:

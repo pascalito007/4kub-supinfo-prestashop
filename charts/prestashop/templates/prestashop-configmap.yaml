@@ -9,3 +9,4 @@ data:
   allow_empty_password: "yes"
   prestashop_host: "172.16.203.150"
   prestashop_apache_port_number: "30000"
+  mariadb_host: "mariadb"
