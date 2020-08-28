@@ -13,6 +13,8 @@ spec:
       labels:
         app: mariadb
     spec:
+      nodeSelector:
+        app: master
       containers:
         - image: bitnami/mariadb:10.1
           name: mariadb
@@ -34,6 +36,10 @@ spec:
                 configMapKeyRef:
                   name: mariadb-config
                   key: mariadb_database
+            - name: MARIADB_PORT_NUMBER
+              value: "3306"
+            - name: MARIADB_HOST
+              value: "172.16.203.157"
           volumeMounts:
             - name: mariadb-volume
               mountPath: /data/db

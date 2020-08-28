@@ -50,4 +50,12 @@ spec:
                   name: prestashop-config
                   key: prestashop_apache_port_number
 
+          volumeMounts:
+            - name: prestashop-volume
+              mountPath: /tmp/prestashop
+      volumes:
+        - name: prestashop-volume
+          persistentVolumeClaim:
+            claimName: prestashop-pvc
+
 
